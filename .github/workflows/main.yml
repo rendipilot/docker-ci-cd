@@ -33,4 +33,4 @@ jobs:
 
       - name: Deploy to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ec2-user@54.197.23.20 "docker pull pilotkode/node-docker:latest && docker stop node-apps && docker rm node-apps && docker run --name node-apps -d -p 80:80 pilotkode/node-docker:latest"
+          ssh -o StrictHostKeyChecking=no ec2-user@54.197.23.20 "docker pull pilotkode/node-docker:latest && docker stop node-apps && docker rm node-apps && docker run --name node-apps -d -p 80:8080 pilotkode/node-docker:latest"
